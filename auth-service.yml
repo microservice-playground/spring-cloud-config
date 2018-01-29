@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: development
+
+---
+
+spring:
+  profiles: development
+  datasource:
+    url: jdbc:mysql://192.168.99.100:3306/dev
+    username: root
+    password: dbpass
+    initialize: true
+server:
+  port: 8884
+  contextPath: /uaa
+security:
+  user:
+    password: password
+  enable-csrf: false
+logging.level.org.springframework.security: DEBUG
+security.ignored: /resources/**
